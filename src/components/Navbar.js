@@ -1,13 +1,20 @@
-import React from 'react'
+import React, {useState} from 'react'
 import logo from '../assets/logo.png';
 import { Link } from 'react-router-dom';
 import "../styles/Navbar.css";
 import ReorderIcon from '@mui/icons-material/Reorder';
 
+
 function Navbar() {
+    const [openLinks, setOpenLinks] = useState(false);
+
+    const toggleNavBar = () =>{
+        setOpenLinks(!openLinks);
+    }
+
     return (
         <div className="navbar">
-            <div className="leftSide">
+            <div className="leftSide" id = {openLinks ? "open" :"close"} >
                 <img src={logo} />
                 <div className="hiddenLinks">
                     <Link to="/">Home</Link>
@@ -21,7 +28,7 @@ function Navbar() {
                 <Link to="/">Menu</Link>
                 <Link to="/">About</Link>
                 <Link to="/">Contact</Link>
-                <button>
+                <button onClick={toggleNavBar}>
                     <ReorderIcon />
                 </button>
 
