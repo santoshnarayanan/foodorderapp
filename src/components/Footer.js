@@ -6,16 +6,17 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import "../styles/Footer.css";
 
 function Footer() {
-  return (
-    <div className="footer">
-        <div className="socialMedia">
-        <InstagramIcon />
-        <TwitterIcon />
-        <FacebookIcon />
-        <LinkedInIcon />
+    return (
+        <div className="footer">
+            <div className="socialMedia">
+                <InstagramIcon />
+                <TwitterIcon />
+                <FacebookIcon />
+                <LinkedInIcon />
+            </div>
+            <p>&copy;2023 - Indianfood.com</p>
         </div>
-    </div>
-  )
+    )
 }
 
 export default Footer;
